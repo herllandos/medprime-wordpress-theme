@@ -18,6 +18,9 @@ get_template_part(
 get_template_part(
     'template-parts/benefits'
 );
+get_template_part(
+    'template-parts/about-doctor'
+);
 ?>
 
 
