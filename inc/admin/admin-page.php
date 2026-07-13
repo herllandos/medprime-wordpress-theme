@@ -1,43 +1,103 @@
 <?php
 /**
- * Admin Page
+ * Página administrativa do MedPrime.
  *
  * @package MedPrime
  */
 
-if (!defined('ABSPATH')) {
-    exit;
-}
+defined( 'ABSPATH' ) || exit;
 
-function medprime_admin_dashboard()
-{
-?>
+/**
+ * Renderiza a página principal.
+ */
+function medprime_render_admin_page() {
+	?>
 
-<div class="wrap">
+	<div class="wrap">
 
-<h1>🩺 MedPrime</h1>
+		<h1 style="margin-top:20px;">
+			MedPrime
+		</h1>
 
-<p>
+		<p>
+			<strong>Tema Premium para Telemedicina</strong>
+		</p>
 
-Bem-vindo ao painel do tema.
+		<hr>
 
-</p>
+		<table class="widefat striped">
 
-<hr>
+			<tbody>
 
-<h2>Status do projeto</h2>
+				<tr>
 
-<ul>
+					<td width="220">
 
-<li>✅ Tema carregado</li>
+						Status
 
-<li>✅ Painel funcionando</li>
+					</td>
 
-<li>🚧 Configurações em desenvolvimento</li>
+					<td>
 
-</ul>
+						✅ Painel carregado com sucesso.
 
-</div>
+					</td>
 
-<?php
+				</tr>
+
+				<tr>
+
+					<td>
+
+						Versão
+
+					</td>
+
+					<td>
+
+						<?php echo esc_html( wp_get_theme()->get( 'Version' ) ); ?>
+
+					</td>
+
+				</tr>
+
+				<tr>
+
+					<td>
+
+						PHP
+
+					</td>
+
+					<td>
+
+						<?php echo esc_html( PHP_VERSION ); ?>
+
+					</td>
+
+				</tr>
+
+				<tr>
+
+					<td>
+
+						WordPress
+
+					</td>
+
+					<td>
+
+						<?php echo esc_html( get_bloginfo( 'version' ) ); ?>
+
+					</td>
+
+				</tr>
+
+			</tbody>
+
+		</table>
+
+	</div>
+
+	<?php
 }

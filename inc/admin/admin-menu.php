@@ -1,33 +1,25 @@
 <?php
 /**
- * Admin Menu
+ * Menu administrativo do MedPrime.
  *
  * @package MedPrime
  */
 
-if (!defined('ABSPATH')) {
-    exit;
+defined( 'ABSPATH' ) || exit;
+
+/**
+ * Registra o menu do tema.
+ */
+function medprime_register_admin_menu() {
+
+	add_theme_page(
+		__( 'MedPrime', 'medprime' ),
+		__( 'MedPrime', 'medprime' ),
+		'edit_theme_options',
+		'medprime',
+		'medprime_render_admin_page'
+	);
+
 }
 
-function medprime_admin_menu()
-{
-    add_menu_page(
-
-        __('MedPrime', 'medprime'),
-
-        __('MedPrime', 'medprime'),
-
-        'manage_options',
-
-        'medprime',
-
-        'medprime_admin_dashboard',
-
-        'dashicons-heart',
-
-        30
-
-    );
-}
-
-add_action('admin_menu', 'medprime_admin_menu');
+add_action( 'admin_menu', 'medprime_register_admin_menu' );
