@@ -48,7 +48,13 @@
 
 .faq-answer{
 
-    padding:0 24px 24px;
+    max-height:0;
+
+    overflow:hidden;
+
+    padding:0 24px;
+
+    transition:max-height .35s ease;
 
 }
 
@@ -57,5 +63,38 @@
     color:#6b7280;
 
     line-height:1.8;
+
+}
+.faq-item.active .faq-answer{
+
+    max-height:400px;
+
+    padding:0 24px 24px;
+
+}
+
+.faq-question{
+
+    position:relative;
+
+}
+
+.faq-question::after{
+
+    content:"+";
+
+    position:absolute;
+
+    right:24px;
+
+    font-size:28px;
+
+    color:#16a34a;
+
+}
+
+.faq-item.active .faq-question::after{
+
+    content:"−";
 
 }
