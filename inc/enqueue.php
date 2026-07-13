@@ -57,9 +57,16 @@ function medprime_enqueue_assets() {
 	);
 
 	wp_enqueue_style(
+		'medprime-benefits',
+		get_template_directory_uri() . '/assets/css/benefits.css',
+		array( 'medprime-how-it-works' ),
+		$version
+	);
+
+	wp_enqueue_style(
 		'medprime-responsive',
 		get_template_directory_uri() . '/assets/css/responsive.css',
-		array( 'medprime-how-it-works' ),
+		array( 'medprime-benefits' ),
 		$version
 	);
 
