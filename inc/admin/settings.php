@@ -28,12 +28,17 @@ function medprime_register_settings() {
 
 	$fields = array(
 
-		'doctor_name'     => 'Nome do Médico',
-		'crm'             => 'CRM',
-		'rqe'             => 'RQE',
-		'specialty'       => 'Especialidade',
-		'doctor_photo'    => 'Foto do Médico',
-		'whatsapp'        => 'WhatsApp',
+		'doctor_name'       => 'Nome do Médico',
+'crm'               => 'CRM',
+'rqe'               => 'RQE',
+'specialty'         => 'Especialidade',
+
+'doctor_bio'        => 'Biografia',
+'doctor_education'  => 'Formação',
+'doctor_experience' => 'Experiência',
+
+'doctor_photo'      => 'Foto do Médico',
+'whatsapp'          => 'WhatsApp',
 		'email'           => 'E-mail',
 		'instagram'       => 'Instagram',
 		'appointment_url' => 'Link de Agendamento',

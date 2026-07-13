@@ -69,12 +69,41 @@ function medprime_render_text_field( $args ) {
 
 	?>
 
-	<input
-		type="text"
-		class="regular-text"
-		name="medprime_settings[<?php echo esc_attr( $id ); ?>]"
-		value="<?php echo esc_attr( $value ); ?>"
-	/>
+	<?php
+
+if ( in_array(
+	$id,
+	array(
+		'doctor_bio',
+		'doctor_education',
+		'doctor_experience',
+	),
+	true
+) ) :
+?>
+
+<textarea
+	rows="6"
+	class="large-text"
+	name="medprime_settings[<?php echo esc_attr( $id ); ?>]"><?php echo esc_textarea( $value ); ?></textarea>
+
+<?php
+
+else :
+
+?>
+
+<input
+	type="text"
+	class="regular-text"
+	name="medprime_settings[<?php echo esc_attr( $id ); ?>]"
+	value="<?php echo esc_attr( $value ); ?>"
+/>
+
+<?php
+
+endif;
+?>
 
 	<?php
 

@@ -67,30 +67,48 @@ $photo_id = medprime_get_option( 'doctor_photo' );
 
 			<div class="doctor-info">
 
-				<div>
+	<div>
 
-					<strong>CRM</strong>
+		<strong>CRM</strong>
 
-					<span><?php echo esc_html( medprime_get_option( 'crm', '-' ) ); ?></span>
+		<span><?php echo esc_html( medprime_get_option( 'crm', '-' ) ); ?></span>
 
-				</div>
+	</div>
 
-				<div>
+	<div>
 
-					<strong>RQE</strong>
+		<strong>RQE</strong>
 
-					<span><?php echo esc_html( medprime_get_option( 'rqe', '-' ) ); ?></span>
+		<span><?php echo esc_html( medprime_get_option( 'rqe', '-' ) ); ?></span>
 
-				</div>
+	</div>
 
-			</div>
+	<div>
+
+		<strong>Formação</strong>
+
+		<span><?php echo esc_html( medprime_get_option( 'doctor_education', '-' ) ); ?></span>
+
+	</div>
+
+	<div>
+
+		<strong>Experiência</strong>
+
+		<span><?php echo esc_html( medprime_get_option( 'doctor_experience', '-' ) ); ?></span>
+
+	</div>
+
+</div>
 
 			<p>
 
-				Atendimento personalizado por telemedicina, com foco em qualidade,
-				segurança e cuidado individualizado.
+	<?php echo nl2br( esc_html( medprime_get_option(
+		'doctor_bio',
+		'Atendimento personalizado por telemedicina, com foco em qualidade, segurança e cuidado individualizado.'
+	) ) ); ?>
 
-			</p>
+</p>
 
 			<?php
 
