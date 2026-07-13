@@ -20,6 +20,8 @@ get_header();
 
 	<?php get_template_part( 'template-parts/about-doctor' ); ?>
 
+	<?php get_template_part( 'template-parts/testimonials' ); ?>
+
 </main>
 
 <?php

@@ -68,9 +68,16 @@ function medprime_enqueue_assets() {
 	);
 
 	wp_enqueue_style(
+		'medprime-testimonials',
+		get_template_directory_uri() . '/assets/css/testimonials.css',
+		array( 'medprime-about' ),
+		$version
+	);
+
+	wp_enqueue_style(
 		'medprime-responsive',
 		get_template_directory_uri() . '/assets/css/responsive.css',
-		array( 'medprime-about' ),
+		array( 'medprime-testimonials' ),
 		$version
 	);
 
