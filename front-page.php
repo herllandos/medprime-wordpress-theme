@@ -15,6 +15,9 @@ get_template_part(
 get_template_part(
     'template-parts/how-it-works'
 );
+get_template_part(
+    'template-parts/benefits'
+);
 ?>
 
 
