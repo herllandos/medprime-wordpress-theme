@@ -18,6 +18,8 @@ get_header();
 
 	<?php get_template_part( 'template-parts/benefits' ); ?>
 
+	<?php get_template_part( 'template-parts/about-doctor' ); ?>
+
 </main>
 
 <?php

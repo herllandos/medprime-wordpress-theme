@@ -7,9 +7,6 @@
 
 defined( 'ABSPATH' ) || exit;
 
-/**
- * Carrega os assets do tema.
- */
 function medprime_enqueue_assets() {
 
 	$version = wp_get_theme()->get( 'Version' );
@@ -64,9 +61,16 @@ function medprime_enqueue_assets() {
 	);
 
 	wp_enqueue_style(
+		'medprime-about',
+		get_template_directory_uri() . '/assets/css/about.css',
+		array( 'medprime-benefits' ),
+		$version
+	);
+
+	wp_enqueue_style(
 		'medprime-responsive',
 		get_template_directory_uri() . '/assets/css/responsive.css',
-		array( 'medprime-benefits' ),
+		array( 'medprime-about' ),
 		$version
 	);
 
