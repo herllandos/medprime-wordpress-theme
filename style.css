@@ -1,0 +1,191 @@
+/*
+Theme Name: MedPrime
+Theme URI: https://medprime.com.br
+Author: Herllan Filho & OpenAI
+Author URI: https://openai.com
+Description: Tema WordPress Premium para Landing Page de Telemedicina.
+Version: 1.0.0
+Requires at least: 6.5
+Tested up to: 6.8
+Requires PHP: 8.1
+License: GNU GPL v2 or later
+Text Domain: medprime
+Tags: medical, telemedicine, landing-page, responsive
+*/
+
+:root{
+
+    /* Cores */
+
+    --primary:#2563EB;
+    --primary-dark:#1D4ED8;
+    --secondary:#0F172A;
+    --accent:#22C55E;
+
+    --white:#FFFFFF;
+    --light:#F8FAFC;
+    --border:#E2E8F0;
+    --text:#334155;
+    --text-light:#64748B;
+
+    /* Sombras */
+
+    --shadow-sm:0 4px 10px rgba(15,23,42,.05);
+    --shadow-md:0 12px 30px rgba(15,23,42,.08);
+    --shadow-lg:0 25px 60px rgba(15,23,42,.12);
+
+    /* Bordas */
+
+    --radius-sm:8px;
+    --radius-md:16px;
+    --radius-lg:24px;
+
+    /* Container */
+
+    --container:1280px;
+
+    /* Fontes */
+
+    --font:'Manrope',sans-serif;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:var(--font);
+
+    background:var(--white);
+
+    color:var(--text);
+
+    line-height:1.7;
+
+    overflow-x:hidden;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+.container{
+
+    width:min(92%,var(--container));
+
+    margin:auto;
+
+}
+
+.section{
+
+    padding:100px 0;
+
+}
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:18px 34px;
+
+    background:var(--accent);
+
+    color:#fff;
+
+    border-radius:999px;
+
+    font-weight:700;
+
+    transition:.30s;
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.title{
+
+    font-size:clamp(2rem,5vw,4rem);
+
+    font-weight:800;
+
+    color:var(--secondary);
+
+    line-height:1.1;
+
+}
+
+.subtitle{
+
+    margin-top:20px;
+
+    font-size:1.2rem;
+
+    color:var(--text-light);
+
+    max-width:650px;
+
+}
+
+.card{
+
+    background:#fff;
+
+    border-radius:var(--radius-md);
+
+    box-shadow:var(--shadow-sm);
+
+    padding:30px;
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-lg);
+
+}
