@@ -26,8 +26,33 @@
 }
 
 .benefit-icon{
-    font-size:42px;
-    margin-bottom:20px;
+
+    width:64px;
+
+    height:64px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#16a34a;
+
+    background:#ecfdf5;
+
+    border-radius:18px;
+
+    margin-bottom:24px;
+
+}
+
+.benefit-icon svg{
+
+    width:30px;
+
+    height:30px;
+
 }
 
 .benefit-card h3{

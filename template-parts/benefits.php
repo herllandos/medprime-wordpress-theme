@@ -26,7 +26,11 @@ defined( 'ABSPATH' ) || exit;
 
 			<div class="benefit-card">
 
-				<div class="benefit-icon">🛡️</div>
+				<div class="benefit-icon">
+
+					<?php echo medprime_get_icon( 'shield' ); ?>
+
+				</div>
 
 				<h3>Atendimento Seguro</h3>
 
@@ -38,7 +42,11 @@ defined( 'ABSPATH' ) || exit;
 
 			<div class="benefit-card">
 
-				<div class="benefit-icon">⚡</div>
+				<div class="benefit-icon">
+
+					<?php echo medprime_get_icon( 'clock' ); ?>
+
+				</div>
 
 				<h3>Agendamento Rápido</h3>
 
@@ -50,7 +58,11 @@ defined( 'ABSPATH' ) || exit;
 
 			<div class="benefit-card">
 
-				<div class="benefit-icon">❤️</div>
+				<div class="benefit-icon">
+
+					<?php echo medprime_get_icon( 'heart' ); ?>
+
+				</div>
 
 				<h3>Atendimento Humanizado</h3>
 
@@ -62,7 +74,11 @@ defined( 'ABSPATH' ) || exit;
 
 			<div class="benefit-card">
 
-				<div class="benefit-icon">🌎</div>
+				<div class="benefit-icon">
+
+					<?php echo medprime_get_icon( 'globe' ); ?>
+
+				</div>
 
 				<h3>Atendimento em Todo o Brasil</h3>
 

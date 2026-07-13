@@ -25,8 +25,6 @@ function medprime_get_option( $key, $default = '' ) {
 
 /**
  * Renderiza todas as seções da Landing.
- *
- * Toda nova seção deverá ser adicionada apenas aqui.
  */
 function medprime_render_home_sections() {
 
@@ -45,5 +43,24 @@ function medprime_render_home_sections() {
 		get_template_part( 'template-parts/' . $section );
 
 	}
+
+}
+
+/**
+ * Retorna um ícone SVG.
+ *
+ * @param string $icon Nome do ícone.
+ *
+ * @return string
+ */
+function medprime_get_icon( $icon ) {
+
+	$file = get_template_directory() . '/assets/icons/' . $icon . '.svg';
+
+	if ( ! file_exists( $file ) ) {
+		return '';
+	}
+
+	return file_get_contents( $file ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 
 }
