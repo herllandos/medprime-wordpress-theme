@@ -1,29 +1,27 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener( 'DOMContentLoaded', function() {
+	var questions = document.querySelectorAll( '.faq-question' );
 
-	const questions = document.querySelectorAll('.faq-question');
+	questions.forEach( function( question ) {
+		question.addEventListener( 'click', function() {
+			var item = question.closest( '.faq-item' );
+			var isActive = item.classList.contains( 'active' );
 
-	questions.forEach(function (question) {
+			questions.forEach( function( currentQuestion ) {
+				var currentItem = currentQuestion.closest( '.faq-item' );
+				var answer = document.getElementById( currentQuestion.getAttribute( 'aria-controls' ) );
 
-		question.addEventListener('click', function () {
+				currentItem.classList.remove( 'active' );
+				currentQuestion.setAttribute( 'aria-expanded', 'false' );
+				answer.setAttribute( 'aria-hidden', 'true' );
+			} );
 
-			const item = this.parentElement;
+			if ( ! isActive ) {
+				var activeAnswer = document.getElementById( question.getAttribute( 'aria-controls' ) );
 
-			const answer = item.querySelector('.faq-answer');
-
-			document.querySelectorAll('.faq-item').forEach(function (faq) {
-
-				if (faq !== item) {
-
-					faq.classList.remove('active');
-
-				}
-
-			});
-
-			item.classList.toggle('active');
-
-		});
-
-	});
-
-});
+				item.classList.add( 'active' );
+				question.setAttribute( 'aria-expanded', 'true' );
+				activeAnswer.setAttribute( 'aria-hidden', 'false' );
+			}
+		} );
+	} );
+} );

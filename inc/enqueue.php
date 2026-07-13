@@ -1,12 +1,17 @@
 <?php
 /**
- * Enfileira os arquivos CSS e JS do tema.
+ * Enfileira os arquivos CSS e JavaScript do tema.
  *
  * @package MedPrime
  */
 
 defined( 'ABSPATH' ) || exit;
 
+/**
+ * Enfileira os recursos públicos do tema.
+ *
+ * @return void
+ */
 function medprime_enqueue_assets() {
 
 	$version = wp_get_theme()->get( 'Version' );
@@ -19,9 +24,7 @@ function medprime_enqueue_assets() {
 	);
 
 	$styles = array(
-		'base',
 		'layout',
-		'components',
 		'hero',
 		'how-it-works',
 		'benefits',
@@ -29,13 +32,11 @@ function medprime_enqueue_assets() {
 		'testimonials',
 		'faq',
 		'whatsapp',
-		'responsive',
 	);
 
 	$dependency = 'medprime-style';
 
 	foreach ( $styles as $style ) {
-
 		wp_enqueue_style(
 			'medprime-' . $style,
 			get_template_directory_uri() . '/assets/css/' . $style . '.css',
@@ -44,7 +45,6 @@ function medprime_enqueue_assets() {
 		);
 
 		$dependency = 'medprime-' . $style;
-
 	}
 
 	wp_enqueue_script(
@@ -54,7 +54,6 @@ function medprime_enqueue_assets() {
 		$version,
 		true
 	);
-
 }
 
 add_action( 'wp_enqueue_scripts', 'medprime_enqueue_assets' );

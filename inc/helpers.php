@@ -65,3 +65,23 @@ function medprime_get_icon( $icon ) {
 	return file_get_contents( $file ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 
 }
+
+/**
+ * Retorna uma configuração do tema ou seu valor padrão quando estiver vazia.
+ *
+ * @param string $key Chave.
+ * @param mixed  $default Valor padrão.
+ *
+ * @return mixed
+ */
+function medprime_get_option_or_default( $key, $default = '' ) {
+
+	$value = medprime_get_option( $key, $default );
+
+	if ( is_string( $value ) && '' === trim( $value ) ) {
+		return $default;
+	}
+
+	return $value;
+
+}
