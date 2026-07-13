@@ -12,15 +12,18 @@ defined( 'ABSPATH' ) || exit;
 
 	<div class="container">
 
-		<div class="section-title">
+		<?php
 
-			<h2>O que nossos pacientes dizem</h2>
+get_template_part(
+	'template-parts/components/section-header',
+	null,
+	array(
+		'title'       => 'O que nossos pacientes dizem',
+		'description' => 'Depoimentos de pacientes atendidos por telemedicina.',
+	)
+);
 
-			<p>
-				Depoimentos de pacientes atendidos por telemedicina.
-			</p>
-
-		</div>
+?>
 
 		<div class="testimonials-grid">
 

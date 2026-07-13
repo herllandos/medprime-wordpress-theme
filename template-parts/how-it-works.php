@@ -12,15 +12,18 @@ defined( 'ABSPATH' ) || exit;
 
 	<div class="container">
 
-		<div class="section-title">
+		<?php
 
-			<h2>Como funciona</h2>
+get_template_part(
+	'template-parts/components/section-header',
+	null,
+	array(
+		'title'       => 'Como funciona',
+		'description' => 'Em poucos minutos você agenda e realiza sua consulta online.',
+	)
+);
 
-			<p>
-				Em poucos minutos você agenda e realiza sua consulta online.
-			</p>
-
-		</div>
+?>
 
 		<div class="steps-grid">
 

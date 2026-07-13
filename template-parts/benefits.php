@@ -12,15 +12,18 @@ defined( 'ABSPATH' ) || exit;
 
 	<div class="container">
 
-		<div class="section-title">
+		<?php
 
-			<h2>Por que escolher o MedPrime?</h2>
+get_template_part(
+	'template-parts/components/section-header',
+	null,
+	array(
+		'title'       => 'Por que escolher o MedPrime?',
+		'description' => 'Atendimento moderno, seguro e focado na sua comodidade.',
+	)
+);
 
-			<p>
-				Atendimento moderno, seguro e focado na sua comodidade.
-			</p>
-
-		</div>
+?>
 
 		<div class="benefits-grid">
 
