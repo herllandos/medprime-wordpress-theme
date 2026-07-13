@@ -11,6 +11,13 @@ function medprime_enqueue_assets() {
 
 	$version = wp_get_theme()->get( 'Version' );
 
+	wp_enqueue_style(
+		'medprime-style',
+		get_stylesheet_uri(),
+		array(),
+		$version
+	);
+
 	$styles = array(
 		'base',
 		'layout',
@@ -21,17 +28,11 @@ function medprime_enqueue_assets() {
 		'about',
 		'testimonials',
 		'faq',
+		'whatsapp',
 		'responsive',
 	);
 
 	$dependency = 'medprime-style';
-
-	wp_enqueue_style(
-		'medprime-style',
-		get_stylesheet_uri(),
-		array(),
-		$version
-	);
 
 	foreach ( $styles as $style ) {
 
