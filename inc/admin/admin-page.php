@@ -8,94 +8,26 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Renderiza a página principal.
+ * Renderiza a página principal do MedPrime.
  */
 function medprime_render_admin_page() {
 	?>
 
 	<div class="wrap">
 
-		<h1 style="margin-top:20px;">
-			MedPrime
-		</h1>
+		<h1><?php esc_html_e( 'MedPrime', 'medprime' ); ?></h1>
 
-		<p>
-			<strong>Tema Premium para Telemedicina</strong>
-		</p>
+		<p><?php esc_html_e( 'Painel Administrativo do Tema.', 'medprime' ); ?></p>
 
-		<hr>
+		<form method="post" action="options.php">
 
-		<table class="widefat striped">
+			<?php
+			settings_fields( 'medprime_settings_group' );
+			do_settings_sections( 'medprime' );
+			submit_button( __( 'Salvar Alterações', 'medprime' ) );
+			?>
 
-			<tbody>
-
-				<tr>
-
-					<td width="220">
-
-						Status
-
-					</td>
-
-					<td>
-
-						✅ Painel carregado com sucesso.
-
-					</td>
-
-				</tr>
-
-				<tr>
-
-					<td>
-
-						Versão
-
-					</td>
-
-					<td>
-
-						<?php echo esc_html( wp_get_theme()->get( 'Version' ) ); ?>
-
-					</td>
-
-				</tr>
-
-				<tr>
-
-					<td>
-
-						PHP
-
-					</td>
-
-					<td>
-
-						<?php echo esc_html( PHP_VERSION ); ?>
-
-					</td>
-
-				</tr>
-
-				<tr>
-
-					<td>
-
-						WordPress
-
-					</td>
-
-					<td>
-
-						<?php echo esc_html( get_bloginfo( 'version' ) ); ?>
-
-					</td>
-
-				</tr>
-
-			</tbody>
-
-		</table>
+		</form>
 
 	</div>
 
