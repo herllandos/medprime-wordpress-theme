@@ -1,6 +1,6 @@
 <?php
 /**
- * Front Page.
+ * Front Page
  *
  * @package MedPrime
  */
@@ -13,6 +13,8 @@ get_header();
 <main class="site-main">
 
 	<?php get_template_part( 'template-parts/hero' ); ?>
+
+	<?php get_template_part( 'template-parts/how-it-works' ); ?>
 
 </main>
 
