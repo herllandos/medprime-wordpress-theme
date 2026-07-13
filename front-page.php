@@ -2,16 +2,26 @@
 
 get_header();
 
+?>
 
-echo '<main>';
-
-echo '<h1 style="padding-top:150px;text-align:center;">
-MedPrime Telemedicina
-</h1>';
+<main>
 
 
-echo '</main>';
+<?php
 
+get_template_part(
+    'template-parts/hero'
+);
+get_template_part(
+    'template-parts/how-it-works'
+);
+?>
+
+
+</main>
+
+
+<?php
 
 get_footer();
 
