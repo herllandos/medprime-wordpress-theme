@@ -43,8 +43,17 @@ function medprime_register_settings() {
 		'instagram'       => 'Instagram',
 		'appointment_url' => 'Link de Agendamento',
 		'hero_title'      => 'Título da Hero',
-		'hero_subtitle'   => 'Subtítulo da Hero',
-		'hero_button'     => 'Texto do Botão',
+'hero_subtitle'   => 'Subtítulo da Hero',
+'hero_button'     => 'Texto do Botão',
+
+'faq_question_1'  => 'FAQ - Pergunta 1',
+'faq_answer_1'    => 'FAQ - Resposta 1',
+
+'faq_question_2'  => 'FAQ - Pergunta 2',
+'faq_answer_2'    => 'FAQ - Resposta 2',
+
+'faq_question_3'  => 'FAQ - Pergunta 3',
+'faq_answer_3'    => 'FAQ - Resposta 3',
 
 	);
 

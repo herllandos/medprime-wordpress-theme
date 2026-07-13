@@ -11,6 +11,21 @@ function medprime_enqueue_assets() {
 
 	$version = wp_get_theme()->get( 'Version' );
 
+	$styles = array(
+		'base',
+		'layout',
+		'components',
+		'hero',
+		'how-it-works',
+		'benefits',
+		'about',
+		'testimonials',
+		'faq',
+		'responsive',
+	);
+
+	$dependency = 'medprime-style';
+
 	wp_enqueue_style(
 		'medprime-style',
 		get_stylesheet_uri(),
@@ -18,68 +33,18 @@ function medprime_enqueue_assets() {
 		$version
 	);
 
-	wp_enqueue_style(
-		'medprime-base',
-		get_template_directory_uri() . '/assets/css/base.css',
-		array( 'medprime-style' ),
-		$version
-	);
+	foreach ( $styles as $style ) {
 
-	wp_enqueue_style(
-		'medprime-layout',
-		get_template_directory_uri() . '/assets/css/layout.css',
-		array( 'medprime-base' ),
-		$version
-	);
+		wp_enqueue_style(
+			'medprime-' . $style,
+			get_template_directory_uri() . '/assets/css/' . $style . '.css',
+			array( $dependency ),
+			$version
+		);
 
-	wp_enqueue_style(
-		'medprime-components',
-		get_template_directory_uri() . '/assets/css/components.css',
-		array( 'medprime-layout' ),
-		$version
-	);
+		$dependency = 'medprime-' . $style;
 
-	wp_enqueue_style(
-		'medprime-hero',
-		get_template_directory_uri() . '/assets/css/hero.css',
-		array( 'medprime-components' ),
-		$version
-	);
-
-	wp_enqueue_style(
-		'medprime-how-it-works',
-		get_template_directory_uri() . '/assets/css/how-it-works.css',
-		array( 'medprime-hero' ),
-		$version
-	);
-
-	wp_enqueue_style(
-		'medprime-benefits',
-		get_template_directory_uri() . '/assets/css/benefits.css',
-		array( 'medprime-how-it-works' ),
-		$version
-	);
-
-	wp_enqueue_style(
-		'medprime-about',
-		get_template_directory_uri() . '/assets/css/about.css',
-		array( 'medprime-benefits' ),
-		$version
-	);
-
-	wp_enqueue_style(
-		'medprime-testimonials',
-		get_template_directory_uri() . '/assets/css/testimonials.css',
-		array( 'medprime-about' ),
-		$version
-	);
-
-	wp_enqueue_style(
-		'medprime-responsive',
-		get_template_directory_uri() . '/assets/css/responsive.css',
-		array( 'medprime-testimonials' ),
-		$version
-	);
+	}
 
 	wp_enqueue_script(
 		'medprime-app',

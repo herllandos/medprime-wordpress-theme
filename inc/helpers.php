@@ -30,13 +30,14 @@ function medprime_render_home_sections() {
 
 	$sections = array(
 
-		'hero',
-		'how-it-works',
-		'benefits',
-		'about-doctor',
-		'testimonials',
+	'hero',
+	'how-it-works',
+	'benefits',
+	'about-doctor',
+	'testimonials',
+	'faq',
 
-	);
+);
 
 	foreach ( $sections as $section ) {
 

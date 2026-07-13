@@ -74,10 +74,14 @@ function medprime_render_text_field( $args ) {
 if ( in_array(
 	$id,
 	array(
-		'doctor_bio',
-		'doctor_education',
-		'doctor_experience',
-	),
+	'doctor_bio',
+	'doctor_education',
+	'doctor_experience',
+
+	'faq_answer_1',
+	'faq_answer_2',
+	'faq_answer_3',
+),
 	true
 ) ) :
 ?>
