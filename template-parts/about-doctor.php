@@ -92,13 +92,21 @@ $photo_id = medprime_get_option( 'doctor_photo' );
 
 			</p>
 
-			<a
-				href="<?php echo esc_url( medprime_get_option( 'appointment_url', '#' ) ); ?>"
-				class="btn">
+			<?php
 
-				Agendar Consulta
+get_template_part(
+	'template-parts/components/button',
+	null,
+	array(
+		'text' => 'Agendar Consulta',
+		'url'  => medprime_get_option(
+			'appointment_url',
+			'#'
+		),
+	)
+);
 
-			</a>
+?>
 
 		</div>
 
