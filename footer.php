@@ -5,141 +5,83 @@
  * @package MedPrime
  */
 
-if (!defined('ABSPATH')) {
-    exit;
-}
+defined( 'ABSPATH' ) || exit;
 
 ?>
 
 <footer class="site-footer">
 
+	<div class="container footer-container">
 
-    <div class="container footer-container">
+		<div class="footer-brand">
 
+			<h3>
 
-        <div class="footer-brand">
+				<?php echo esc_html( medprime_get_option( 'doctor_name', 'MedPrime' ) ); ?>
 
+			</h3>
 
-            <a href="<?php echo esc_url(home_url('/')); ?>">
+			<p>
 
-                <span class="logo-text">
-                    Med<span>Prime</span>
-                </span>
+				<?php echo esc_html( medprime_get_option(
+					'hero_subtitle',
+					'Atendimento médico online com segurança e praticidade.'
+				) ); ?>
 
-            </a>
+			</p>
 
+		</div>
 
-            <p>
-                Consultas médicas online com segurança,
-                comodidade e atendimento humanizado.
-            </p>
+		<div class="footer-contact">
 
+			<h3>Contato</h3>
 
-        </div>
+			<p>
 
+				<?php echo esc_html( medprime_get_option(
+					'email',
+					'contato@medprime.com'
+				) ); ?>
 
+			</p>
 
-        <div class="footer-links">
+			<a
+				class="btn"
+				href="<?php echo esc_url( medprime_get_option(
+					'appointment_url',
+					'#'
+				) ); ?>">
 
+				Agendar Consulta
 
-            <h3>
-                Links
-            </h3>
+			</a>
 
+		</div>
 
-            <ul>
+	</div>
 
-                <li>
-                    <a href="#inicio">
-                        Início
-                    </a>
-                </li>
+	<div class="footer-bottom">
 
+		<div class="container">
 
-                <li>
-                    <a href="#como-funciona">
-                        Como funciona
-                    </a>
-                </li>
+			<p>
 
+				© <?php echo esc_html( gmdate( 'Y' ) ); ?>
 
-                <li>
-                    <a href="#especialidades">
-                        Atendimentos
-                    </a>
-                </li>
+				<?php echo esc_html( medprime_get_option(
+					'doctor_name',
+					'MedPrime'
+				) ); ?>
 
+			</p>
 
-                <li>
-                    <a href="#faq">
-                        Dúvidas
-                    </a>
-                </li>
+		</div>
 
-
-            </ul>
-
-
-        </div>
-
-
-
-
-        <div class="footer-contact">
-
-
-            <h3>
-                Atendimento
-            </h3>
-
-
-            <p>
-                Consultas exclusivamente por telemedicina.
-            </p>
-
-
-            <a class="btn" href="#agendamento">
-                Agendar consulta
-            </a>
-
-
-        </div>
-
-
-
-    </div>
-
-
-
-    <div class="footer-bottom">
-
-
-        <div class="container">
-
-
-            <p>
-
-                © <?php echo date('Y'); ?>
-
-                MedPrime.
-                Todos os direitos reservados.
-
-            </p>
-
-
-        </div>
-
-
-    </div>
-
+	</div>
 
 </footer>
 
-
-
 <?php wp_footer(); ?>
 
-
 </body>
-
 </html>
